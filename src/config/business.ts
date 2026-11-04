@@ -6,8 +6,7 @@ const envPrice = (key: string, fallback: number) => {
 const contactPhone = "+91 8968966640";
 const contactPhoneDigits = contactPhone.replace(/\D/g, "");
 
-export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
-  || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "https://kohli-web-services.vercel.app");
+export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://kohli-web-services.vercel.app";
 
 export function createWhatsAppLink(message?: string) {
   const query = message ? `?text=${encodeURIComponent(message)}` : "";
